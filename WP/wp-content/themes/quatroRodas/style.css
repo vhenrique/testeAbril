@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* 
+Theme Name: Quatro Rodas
+Theme URI: http://vhenrique.com
+Description: Tema da revista Quatro Rodas
+Version: 1.0
+Tags: carros, quatro-rodas, revista
+
+Author: Vitor Henrique
+Author URI: http://vhenrique.com
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+Text Domain: lang
+*/
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700);
+body{margin: 0; font-family: 'Dosis', sans-serif; font-size: 14px;}
+h1{text-transform: uppercase; margin: 0;}
+h4{font-size: 16.5px; text-transform: uppercase; margin: 0;}
+h5{font-size: 14px; text-transform: uppercase; margin: 0;}
+
+.wrap{width: 1320px; margin: 0 auto;}
+.bged1c24{background-color: #ED1C24;}
+.bg242424{background-color: #242424;}
+.colorFFF{color: #FFF;}
+.colorED1C24{color: #ED1C24;}
+
+/*publicity*/
+#publicity{text-align: center; margin: 10px 0;}
+
+/*Mobile menu*/
+a.menuIcon{background: url('assets/img/menu.png')no-repeat; padding: 15px; position: absolute; right: 50px; top: 40px; display: none;}
+a.active{background: url('assets/img/close.png')no-repeat; background-size: 25px;}
+li a.active{background: none;}
+
+/*header*/
+header.wrap{width: 1290px;}
+header.main{padding: 25px 15px; position: relative;}
+header .logo{display: inline-block;}
+header .mainMenu{display: inline-block;}
+.menu{list-style: none; margin: 0;}
+.menu li{display: inline-block; position: relative; font-size: 16.5px; padding: 0 10px; margin: 0 5px;}
+header .menu li.menu-item-has-children::after{content: url('assets/img/arrow.png'); position: absolute; top: -2px; right: -5px;}
+header .menu li .sub-menu{display: none; position: absolute; padding: 10px; background-color: #ED1C24; min-width: 100px; z-index: 1;}
+header .menu li .sub-menu li{margin: 0; padding: 5px 0; display: block;}
+.menu li a, .menu li{color: #FFF; text-transform: uppercase; text-decoration: none; font-weight: bold;}
+.menu li a:hover{opacity: 0.8;}
+header section.mainHeader{float: right; margin: 10px 20px 0 0;}
+header .mainSearch{background: #FFF; padding: 0; position: relative; display: inline-block;}
+header .mainSearch input[type="text"]{padding: 8px 15px; font-size: 14px; text-transform: uppercase; width: 120px; border: none;}
+header .mainSearch input[type="submit"]{position: absolute; right: 8px; top: 10px; border:none; padding: 2px 8px; background: url('assets/img/search.png')no-repeat;}
+/*end header*/
+
+/*secondary menu*/
+.secondaryMenu{margin-bottom: 10px;}
+.secondaryMenu .arrow{display: inline-block; background: url('assets/img/redArrow.png')no-repeat; padding: 3px 10px; width: 122px;}
+.secondaryMenu .menu{display: inline-block; padding: 4px 0;}
+.secondaryMenu li{font-size: 16px;}
+
+.highlights{list-style: none; margin: 0 0 30px 0; padding: 0; display: inline-block; width: 100%;}
+.highlights li{float: left; max-height: 250px;}
+.highlights li.banner{float: right;}
+.highlights li.main{max-height: 500px;}
+.highlights li.main h1{font-size: 28px;}
+.highlights li.main a article{width: 70%;}
+.highlights li{font-weight: bold;}
+.highlights li .title{font-size: 19px;}
+.highlights li .term{display: inline-block; padding: 0 10px;}
+.highlights li .promoted{padding: 0 5px;}
+.highlights li .term::before{content: ' '; background-color: #ED1C24; padding: 0 8px; border-radius: 2px; margin-right: 5px;}
+.highlights li a{text-decoration: none; position: relative; display: block; opacity: 1; transition: opacity 0.5s; overflow: hidden; text-align: center;}
+.highlights li a:hover{opacity: 0.6; transition: opacity 0.5s;}
+.highlights li a article{text-align: right; position: absolute; bottom: 20px; right: 10px; z-index: 1; width: 80%;}
+
+.secondary li{width: 315px; padding: 0 10px; display: inline-block;}
+.secondary li:first-child{padding-left: 0;}
+.secondary li:last-child{padding-right: 0;}
+.secondary li article{display: block; padding: 0 10px;}
+.secondary li article h5{margin: 10px 0;}
+
+@media screen and (max-width: 1320px) {
+	#publicity img{width: 80%;}
+	.wrap{width: 98%; padding: 0 1%;}
+	header.wrap{width: 99%; display: inline-block; padding: 25px 0.5%;}
+	header .logo{display: block; margin: 0 auto; width: 190px;}
+	a.menuIcon{display: block;}
+	.secondaryMenu, header .mainMenu .menu li:last-child{display: none;}
+	header .mainSearch{position: absolute; top: 30px; background: none;}
+	header .mainSearch input[type="text"]{width: 0; transition: width 0.5s; background: none;}
+	header .mainSearch input[type="text"].active{width: 120px; transition: width 0.5s; background: #FFF;}
+
+	header .mainMenu{width: 100%; display: inline-block;}
+	header section.mainHeader{float: none; margin: 10px 35px 10px 0; display: block;}
+	header .mainMenu .menu{ padding: 0; height: 0; overflow: hidden; transition: height 0.5s;}
+	header .mainMenu .menu.active{height: auto; transition: height 0.5s; position: absolute; z-index: 5; background-color: #ED1C24; width: 95%; padding: 0 1%;}
+	header .mainMenu .menu li{display: block; padding: 10px 0; border-top: solid 1px #c21c1c;}
+
+	.highlights li.main{float: none; width: 100%;}
+	.highlights li, .secondary li{width: 48%;}
+	.secondary{text-align: center;}
+	.secondary li{padding: 0; display: inline-table; float: none;}
+	.highlights li.banner{overflow: hidden;}
+}
